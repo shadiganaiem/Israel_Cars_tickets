@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISRLCARS.Views.TicketCheck"
+             Padding="0,20,0,0">
+    
+
+      
+        
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Margin="10,0,0,0">
+              <Button 
+            Text="סריקת ברקוד"
+            FontSize="30"
+            Clicked="btnScan_clicked"
+            Margin="0,0,0,20"
+            />
+        
+            <Label x:Name="fullname"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   />
+            <Label x:Name="UserID"
+                   HorizontalOptions="Center"
+                   FontSize="20"/>
+            <Label x:Name="phone"
+                   HorizontalOptions="Center"
+                   FontSize="20"/>
+            <Label x:Name="ticketNum"
+                   HorizontalOptions="Center"
+                   FontSize="20"/>
+            <Label x:Name="permission"
+                   HorizontalOptions="Center"
+                   FontSize="20"/>
+            <Button x:Name="enter"
+                    FontSize="30"
+                    Margin="0,20,0,0"
+                    Text="אישור"
+                    IsVisible="false"
+                    Clicked="Handle_Clicked"/>
+        </StackLayout>
+       
+</ContentPage>

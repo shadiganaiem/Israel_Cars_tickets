@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ISRLCARS.Views.NewTicket"
+             Padding="0,20,0,0">
+    
+    
+    <StackLayout VerticalOptions="Center">
+        <Image Source="Logo.png"
+               Margin="50,0,50,30"/>
+        <Button Text="סריקת ברקוד"
+                x:Name="btnScan"
+                Clicked="btnScan_clicked"
+                WidthRequest="200"
+                HeightRequest="40"
+                BackgroundColor="#3897f0"
+                TextColor="White"
+                FontSize="20"
+                HorizontalOptions="Center"
+                />
+        
+        <Entry x:Name="QRentry"
+               Placeholder="ברקוד"
+               WidthRequest="350"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10"
+               Text=""/>
+        <Entry x:Name="TicketNum"
+               Placeholder="מספר כרטיס"
+               WidthRequest="350"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10"
+               Keyboard="Numeric"
+               Text=""/>
+        
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Margin="0,0,0,10">
+            <Entry x:Name="UserID"
+               Placeholder="תעודת זהות"
+               WidthRequest="310"
+               HorizontalOptions="Center"
+               Keyboard="Numeric"
+               Text=""/>
+            <Button Text="בדיקה"
+                    HeightRequest="35"
+                    Clicked="CheckButtonAsync"
+                    />
+        </StackLayout>
+        
+        <Entry x:Name="fullname"
+               Placeholder="שם מלא"
+               WidthRequest="350"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"
+               Text=""/>
+        <Entry x:Name="email"
+               Placeholder="דואר אלקטרוני"
+               WidthRequest="350"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"
+               Text=""
+               />
+        <Entry x:Name="phone"
+               Placeholder="מספר נייד"
+               WidthRequest="350"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"
+               Text=""
+               Keyboard="Numeric"
+               />
+        <Button Text="אישור"
+                WidthRequest="200"
+                HeightRequest="40"
+                BackgroundColor="#3897f0"
+                TextColor="White"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Clicked="Handle_ClickedAsync"
+                />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d" x:Class="ISRLCARS.MainPage"
+             Padding="0,20,0,0">
+    
+    <StackLayout VerticalOptions="Center">
+        
+         <Image Source="Logo.png"
+                Margin="50,0,50,100"
+                />
+         <Button Text= "כרטיס חדש"
+                BackgroundColor="#3897F0"
+                VerticalOptions="Center" 
+                HeightRequest="50"
+                TextColor="White"
+                HorizontalOptions="Center"
+                WidthRequest="250"
+                FontSize="20"
+                Clicked="NewTicketButton"/>
+         <StackLayout x:Name="pass"
+                      Orientation="Horizontal"
+                      HorizontalOptions="Center"
+                      IsVisible="false">
+            <Entry x:Name="password"
+                   HorizontalOptions="Center"
+                   WidthRequest="210"
+                   Placeholder="סיסמה"
+                   IsPassword="true"/>
+            <Button Text="אישור"
+                    HeightRequest="30"
+                    Clicked="Handle_ClickedAsync"/>
+         </StackLayout> 
+        
+         <Button Text="בדיקת כרטיסים" 
+                BackgroundColor="#3897F0"
+                VerticalOptions="Center" 
+                HeightRequest="50"
+                TextColor="White"
+                HorizontalOptions="Center"
+                WidthRequest="250"
+                FontSize="20"
+                Clicked="TicketCheckButton"/>
+        
+        <Button Text="בדיקה לפי תעודת זהות"
+                BackgroundColor="#3897F0"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                TextColor="White"
+                HorizontalOptions="Center"
+                WidthRequest="250"
+                FontSize="20"
+                Clicked="TicketCheckByIDButtonAsync"/>
+       
+        <Label x:Name="txtBarcode"
+               Text=""
+               TextColor="Red"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               />
+        <Grid>
+            <Label Grid.Row="9"
+                HorizontalOptions="Center"   
+                Text="g4appsGroup.com 2019 - Shadi Ganaiem"
+                FontSize="10"
+                Grid.ColumnSpan="2"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
